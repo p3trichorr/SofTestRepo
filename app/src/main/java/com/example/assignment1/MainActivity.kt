@@ -39,6 +39,9 @@ class MainActivity : AppCompatActivity() {
             }
             r++
         }
-        return res
+        return res.ifEmpty {
+            res = "[No Output]"
+            res
+        }
     }
 }
